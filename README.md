@@ -4,10 +4,19 @@
 
 ## Build Instructions
 
-On Debian-based systems:
+On Debian-based systems for x86 processors:
 ```bash
 ./autogen
 ./configure --prefix /usr/ --libdir /usr/lib/x86_64-linux-gnu/
+make
+sudo make install
+```
+
+For Arm processors (such as Nvidia Nano, Xavier, TX1/2...):
+
+```bash
+./autogen
+./configure --libdir /usr/lib/aarch64-linux-gnu/
 make
 sudo make install
 ```
